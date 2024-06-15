@@ -1,21 +1,26 @@
 $(document).ready(function () {
 
-
-
     $("#parameter-form").validate({
-
         rules: {
             min_col: {
-                required: true
+                required: true,
+                min: -100,
+                max: 100
             },
             max_col: {
-                required: true
+                required: true,
+                min: -100,
+                max: 100
             },
             min_row: {
-                required: true
+                required: true,
+                min: -100,
+                max: 100
             },
             max_row: {
-                required: true
+                required: true,
+                min: -100,
+                max: 100
             }
         },
 
@@ -29,6 +34,4 @@ $(document).ready(function () {
             $(element).valid();
         }
     });
-
-
 });

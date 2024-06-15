@@ -20,7 +20,7 @@
                                 <label for="min_col">Minimum Column Value:</label>
                             </td>
                             <td>
-                                <input type="text" id="min_col" name="min_col" value="-5"><br>
+                                <input type="number" id="min_col" name="min_col" value="-5"><br>
                             </td>    
                         </tr>
                         <tr>
@@ -34,7 +34,7 @@
                                 <label for="max_col">Maximum Column Value:</label>
                             </td>
                             <td>
-                                <input type="text" id="max_col" name="max_col" value="5"><br>
+                                <input type="number" id="max_col" name="max_col" value="5"><br>
                             </td>
                         </tr>
                         <tr>
@@ -48,7 +48,7 @@
                                 <label for="min_row">Minimum Row Value:</label>
                             </td>
                             <td>
-                                <input type="text" id="min_row" name="min_row" value="-5"><br>
+                                <input type="number" id="min_row" name="min_row" value="-5"><br>
                             </td>
                         </tr>
                         <tr>
@@ -62,7 +62,7 @@
                                 <label for="max_row">Maximum Row Value:</label>
                             </td>
                             <td>
-                                <input type="text" id="max_row" name="max_row" value="5"><br>
+                                <input type="number" id="max_row" name="max_row" value="5"><br>
                             </td>
                         </tr>
                         <tr>
@@ -71,18 +71,26 @@
                                 <div id="max_row_slider" class="slider"></div>
                             </td>
                         </tr>
-                        <!--
                         <tr>
                             <td>
-                                <input type="button" value="Compute" onclick="run();">
+                                <input type="button" id="save" value="Save">
                             </td>
                         </tr>
-                        -->
+                        <tr>
+                            <td>
+                                <input type="button" id="delete" value="Delete Current Table">
+                            </td>
+                        </tr>
                     </table>
                 </form>
             </div>
-
             <div id="result" class="grid-item">
+                <ul>
+                    <li><a href="#tab-0">-5, 5, -5, 5</a></li>
+                </ul>
+                <div id="tab-0">
+                    <p></p>
+                </div>
             </div>
 
         </div>
@@ -93,6 +101,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script> <!-- jquery validation -->
     <script src="js/validation.js"></script>    <!-- jquery validation -->
     <script src="js/sliders.js"></script>    <!-- jquery sliders -->
-    <script src="js/script.js"></script>    <!-- table creation -->
+    <script src="js/tabs.js"></script>    <!-- jquery tabs -->
+    <!--<script src="js/script.js"></script>     table creation -->
+    <script src="js/table_builder.js"></script>     <!-- table creation -->
     </body>
 </html>

@@ -1,4 +1,4 @@
-window.onload = run;
+//window.onload = run;
 
 function rowFromArray(array) {
     let row = document.createElement("tr");
@@ -13,13 +13,9 @@ function rowFromArray(array) {
     return row;
 }
 
-function run() {
+function build_table() {
     // grab form
     let form = document.getElementById("parameter-form");
-    
-    // grab & clear result div
-    let resultArea = document.getElementById("result");
-    resultArea.replaceChildren();
 
     // populate variables from from
     let xMin = Number(form.elements["min_col"].value);
@@ -27,39 +23,8 @@ function run() {
     let yMin = Number(form.elements["min_row"].value);
     let yMax = Number(form.elements["max_row"].value);
 
-    /* handled with jquery validation 
-    // ensure inputs are integers
-    if ( !(Number.isInteger(xMin) && 
-           Number.isInteger(xMax) && 
-           Number.isInteger(yMin) && 
-           Number.isInteger(yMax)) ) {
-           let errorArea = document.getElementById("result");
-           result.replaceChildren();
-           let message = document.createElement("h2");
-           message.className = "errorMessage";
-           let messageText = document.createTextNode("Please only enter integers");
-           message.appendChild(messageText);
-           result.appendChild(message);
-            return;
-        }
-
-    // range checking
-    if ( ((xMax - xMin) > 300) ||
-         ((yMax - yMin) > 300)    ) {
-            let errorArea = document.getElementById("result");
-            result.replaceChildren();
-            let message = document.createElement("h2");
-            message.className = "errorMessage";
-            let messageText = document.createTextNode("Please ensure the range between the column and row minimums and maximums is at most 300");
-            message.appendChild(messageText);
-            result.appendChild(message);
-            return;
-       }
-    */
-
     /* build table */
     let table = document.createElement("table");
-    result.appendChild(table);
 
     // build header row 
     let array = new Array(xMax - xMin);

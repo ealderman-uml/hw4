@@ -2,62 +2,62 @@ $(document).ready(function() {
 
     $("#min_col_slider").slider({
         animate: "fast",
-        min: -300,
-        max: 300,
+        min: -100,
+        max: 100,
         value: -5,
         slide: function(event, ui) {
             $("#min_col").val(ui.value);
-            run();
+            update_table();
         }
     });
 
     $("#max_col_slider").slider({
         animate: "fast",
-        min: -300,
-        max: 300,
+        min: -100,
+        max: 100,
         value: 5,
         slide: function(event, ui) {
             $("#max_col").val(ui.value);
-            run();
+            update_table();
         }
     });
 
     $("#min_row_slider").slider({
         animate: "fast",
-        min: -300,
-        max: 300,
+        min: -100,
+        max: 100,
         value: -5,
         slide: function(event, ui) {
             $("#min_row").val(ui.value);
-            run();
+            update_table();
         }
     });
 
     $("#max_row_slider").slider({
         animate: "fast",
-        min: -300,
-        max: 300,
+        min: -100,
+        max: 100,
         value: 5,
         slide: function(event, ui) {
             $("#max_row").val(ui.value);
-            run();
+            update_table();
         }
     });
     
     $("#min_col").change(function(event, ui) {
         $("#min_col_slider").slider("value", $("#min_col").val());
-        run();
+        update_table();
     })
     $("#max_col").change(function(event, ui) {
         $("#max_col_slider").slider("value", $("#max_col").val());
-        run();
+        update_table();
     })
     $("#min_row").change(function(event, ui) {
         $("#min_row_slider").slider("value", $("#min_row").val());
-        run();
+        update_table();
     })
     $("#max_row").change(function(event, ui) {
         $("#max_row_slider").slider("value", $("#max_row").val());
-        run();
+        update_table();
     })
 });
