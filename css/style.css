@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 
-.grid-container {   /* TODO: re-evaluate whether to use class or ID here  */
+.grid-container {
     width: 98%;
     height: 98%;
     margin: auto;
@@ -91,10 +91,3 @@ form .error {
     position: sticky;
     left: 0;
 }
-
-/*
-#result tr:first-child > td:first-child {
-    background-color: white;
-    position: static;
-}
-*/
