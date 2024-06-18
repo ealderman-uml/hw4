@@ -46,6 +46,8 @@ class TabHandler {
     }
 
     delete() {
+        if (this.curMaxIndex < 1) { return }    // prevent deletion of final, "working" tab
+        
         let activeTabIndex = $(this.parentElement).tabs( "option", "active");
         $(this.parentElement + " ul").children()[activeTabIndex].remove();
         $(this.parentElement).children()[activeTabIndex + 1].remove();
