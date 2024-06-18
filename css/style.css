@@ -57,6 +57,12 @@ form input {
     background-color: rgba(255, 255, 255, 0.66);
 }
 
+form .error {
+    display: block;
+    padding: 10px;
+    color: darkred;
+}
+
 #result table {
     margin: auto;   /* center in grid */
     padding: 10px;

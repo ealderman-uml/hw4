@@ -24,7 +24,26 @@ $(document).ready(function () {
             }
         },
 
-        messages: {},
+
+        // Is there really no less verbose way to do this?
+        messages: {
+            min_col: {
+                min: "Please enter an integer between -100 and 100",
+                max: "Please enter an integer between -100 and 100"
+            },
+            max_col: {
+                min: "Please enter an integer between -100 and 100",
+                max: "Please enter an integer between -100 and 100"
+            },
+            min_row: {
+                min: "Please enter an integer between -100 and 100",
+                max: "Please enter an integer between -100 and 100"
+            },
+            max_row: {
+                min: "Please enter an integer between -100 and 100",
+                max: "Please enter an integer between -100 and 100"
+            }
+        },
 
         onfocusout: function(element) {
             $(element).valid();

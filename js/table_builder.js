@@ -1,5 +1,3 @@
-//window.onload = run;
-
 function rowFromArray(array) {
     let row = document.createElement("tr");
 
